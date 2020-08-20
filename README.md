@@ -20,8 +20,13 @@ After cloning or downloading the repository, access the application root and exe
 # Execution
 * npm install --save to download node_modules packages;
 * json-server --watch db.json to raise the backend;
-* Run `ng serve` for the dev server. Navigate to `http: // localhost: 4200 /`
+* Run `ng serve` for the dev server. Navigate to `http://localhost:4200/`
 * The application will be updated automatically;
+
+# Live App
+* You can view the execution of the application;
+* Accessing this link https://vmedeiros.github.io/angular-crud-20/#/
+* It is also necessary to run the base "db.json" locally;
 
 # Dev Profile
 * https://www.linkedin.com/in/victormedeiros95/
