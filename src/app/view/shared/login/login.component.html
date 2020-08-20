@@ -1,0 +1,51 @@
+<div class="background" style="min-height: 90vh;">
+
+  <div class="container">
+
+    <form [formGroup]="loginForm">
+
+      <div class="container-menu">
+
+        <div class="ui-g ui-fluid">
+          <div class="ui-g-12 ui-md-12">
+            <h2 class="texto">
+              <img src="./assets/img/school.png" class="header-img">
+            </h2>
+          </div>
+
+          <div class="ui-g-12 ui-md-12">
+            <h2 class="texto">
+              Bem-Vindo ao Crud-Angular
+            </h2>
+          </div>
+
+          <div class="ui-g-12 ui-md-12">
+            <label for="login">Nome</label>
+            <input id="login" type="text" size="35" pInputText formControlName="username" placeholder="Nome" required
+              minlength="4" maxlength="10">
+          </div>
+
+          <div class="ui-g-12 ui-md-12">
+            <label for="senha">Senha</label>
+            <input id="senha" type="password" size="35" pInputText formControlName="password" placeholder="Nome" required
+              minlength="4" maxlength="10">
+          </div>
+        </div>
+
+        <br>
+        <p class="texto">Copyright © 2020 <strong> Crud-Angular </strong>. Todos os direitos reservados.</p>
+
+        <p-footer>
+          <div class="ui-g-12 ui-md-12">
+            <button type="button" pButton icon="pi pi-sign-in" (click)="fazerLogin()" label="Entrar"
+              [disabled]="!loginForm.valid" style="float: right;"></button>
+          </div>
+        </p-footer>
+
+      </div>
+
+    </form>
+
+  </div>
+
+</div>

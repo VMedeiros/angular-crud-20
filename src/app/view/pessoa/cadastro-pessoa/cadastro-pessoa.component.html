@@ -1,0 +1,64 @@
+<div *ngIf="displayAdicionar">
+
+    <p-dialog header="{{labelDialog}}" [(visible)]="displayAdicionar" [modal]="true" [minY]="90" [baseZIndex]="10000"
+        [style]="{'min-height':'140px'}">
+
+        <div [formGroup]="cadastroForm" class="p-col-12">
+            <div class="ui-g ui-fluid">
+                <div class="ui-g-6 ui-md-6">
+                    <label for="nome">Nome da Pessoa</label>
+                    <input id="nome" type="text" size="35" pInputText formControlName="nome"
+                        placeholder="Nome da Pessoa" required minlength="4" maxlength="20">
+                </div>
+
+                <div class="ui-g-6 ui-md-6">
+                    <label for="endereco">Endereço</label>
+                    <input id="endereco" type="text" size="35" pInputText formControlName="endereco"
+                        placeholder="Endereço" required minlength="4" maxlength="20">
+                </div>
+            </div>
+
+            <div class="ui-g ui-fluid">
+                <div class="ui-g-6 ui-md-6">
+                    <label for="cpf">CPF</label>
+                    <input id="cpf" type="text" size="35" pInputText formControlName="cpf" placeholder="CPF" required
+                        minlength="14" maxlength="14" (keypress)="numberOnly($event)">
+                </div>
+            </div>
+
+            <br>
+
+            <p-footer>
+                <div style="float: right;">
+                    <div class="ui-g-6 ui-md-6">
+                        <button type="button" pButton icon="pi pi-times" (click)="cancelar()" label="Cancelar"
+                            class="btn-secondary"></button>
+                    </div>
+                    <div class="ui-g-6 ui-md-6">
+                        <button type="button" pButton icon="pi pi-check" (click)="salvar()" label="Salvar"
+                            [disabled]="!cadastroForm.valid" style="float: right;" *ngIf="!isEditar"></button>
+
+                        <button type="button" pButton icon="pi pi-check" (click)="editar()" label="Editar"
+                            [disabled]="!cadastroForm.valid" style="float: right;" *ngIf="isEditar"></button>
+                    </div>
+                </div>
+            </p-footer>
+
+        </div>
+
+    </p-dialog>
+
+</div>
+
+<div *ngIf="displayExcluir">
+    <p-dialog header="Exclusão de Pessoa" [(visible)]="displayExcluir" [modal]="true" [minY]="90" [baseZIndex]="10000"
+        [style]="{'min-height':'140px'}">
+        <p> A pessoa <strong>{{pessoaNome}}</strong>, será <strong>excluida</strong> da ferramenta, deseja continuar?
+        </p>
+        <p-footer>
+            <button type="button" class="btn-secondary" pButton icon="pi pi-times" (click)="displayExcluir = false"
+                label="Não"></button>
+            <button type="button" pButton icon="pi pi-check" (click)="excluir()" label="Sim"></button>
+        </p-footer>
+    </p-dialog>
+</div>

@@ -1,0 +1,22 @@
+{
+  "Pessoa": [
+    {
+      "id": 1,
+      "nome": "Pessoa A",
+      "endereco": "Endereço A",
+      "cpf": "11111111111111"
+    },
+    {
+      "id": 2,
+      "nome": "Pessoa B",
+      "endereco": "Endereço B",
+      "cpf": "22222222222222"
+    },
+    {
+      "id": 3,
+      "nome": "Pessoa C",
+      "endereco": "Endereço C",
+      "cpf": "33333333333333"
+    }
+  ]
+}

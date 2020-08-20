@@ -1,0 +1,11 @@
+.footer {
+    background: linear-gradient( #d6e8e0, #271560)
+}
+
+.texto {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: smaller;
+    color: #fff;
+}

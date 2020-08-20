@@ -1,0 +1,68 @@
+<div class="background">
+    <h1 class="texto">Listagem de Pessoas</h1>
+    <div class="ui-g">
+        <div class="ui-g-12">
+            <button pButton label="Adicionar" type="button" icon="pi pi-plus" style="float: right;"
+                (click)="getAdicionar()" pTooltip="Adicionar Pessoa" tooltipPosition="bottom"></button>
+        </div>
+    </div>
+
+    <p-table #dt [value]="pessoas" [paginator]="true" [rows]="10">
+        <ng-template pTemplate="caption">
+            <strong>
+                Pessoas
+            </strong>
+        </ng-template>
+        <ng-template pTemplate="header">
+            <tr>
+                <th class="content-column" *ngFor="let col of cols" [pSortableColumn]="col.field"
+                    [ngStyle]="{'width': col.width}">
+                    {{col.header}}
+                    <p-sortIcon [field]="col.field"></p-sortIcon>
+                </th>
+                <th style="width: 15%;" class="content-column"></th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-pessoa>
+            <tr [pEditableRow]="rowData">
+                <td *ngFor="let col of cols" [ngStyle]="{'text-align': col.align}">
+                    {{pessoa[col.field]?.nome ? pessoa[col.field]?.nome : pessoa[col.field] | titlecase}}
+                </td>
+
+                <td style="text-align:center">
+                    <div class="ui-g">
+                        <div class="ui-g-6">
+                            <button pButton type="button" pInitEditableRow icon="pi pi-pencil"
+                                (click)="getEditar($event, pessoa)" pTooltip="Editar Pessoa"
+                                tooltipPosition="bottom"></button>
+                        </div>
+                        <div class="ui-g-6">
+                            <button pButton type="button" pInitEditableRow icon="pi pi-times" class="btn-secondary"
+                                (click)="getExcluir($event, pessoa)" pTooltip="Excluir Pessoa"
+                                tooltipPosition="bottom"></button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <h1 style="color: white; font-size: 20px; margin-left: 15px;">
+                <i class="pi pi-exclamation-triangle"></i>
+                Nenhuma pessoa encontrada.
+            </h1>
+        </ng-template>
+
+    </p-table>
+
+    <app-cadastro-pessoa [item]="itemSelect" (eventOutput)="getTableInfo()"></app-cadastro-pessoa>
+
+    <br>
+
+    <div class="ui-g">
+        <div class="ui-g-12">
+            <button pButton label="voltar" type="button" icon="pi pi-angle-left" style="float: right;" pTooltip="Voltar"
+                tooltipPosition="bottom" (click)="eventVoltar()"></button>
+        </div>
+    </div>
+
+</div>
