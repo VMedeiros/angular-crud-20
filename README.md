@@ -1,7 +1,10 @@
 
 # Crud-Angular
 
-This project aims to present a platform for registering Schools and Classes.
+This project aims to present a platform for registering person CRUD;
+this is a template for a complete project made with angular 7 and Json-Server;
+Here you will be able to view the items, add, edit and remove;
+The interface was made with primeng;
 
 ## Development server
 
@@ -19,3 +22,6 @@ After cloning or downloading the repository, access the application root and exe
 * json-server --watch db.json to raise the backend;
 * Run `ng serve` for the dev server. Navigate to `http: // localhost: 4200 /`
 * The application will be updated automatically;
+
+# Dev Profile
+* https://www.linkedin.com/in/victormedeiros95/
