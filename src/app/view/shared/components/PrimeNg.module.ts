@@ -8,6 +8,7 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
 import { MenubarModule } from 'primeng/menubar';
+import {MenuModule} from 'primeng/menu';
 import { MessageModule } from 'primeng/message';
 import { MessagesModule } from 'primeng/messages';
 import { OverlayPanelModule } from 'primeng/overlaypanel';
@@ -61,6 +62,7 @@ import { TooltipModule } from 'primeng/tooltip';
     SidebarModule,
     MessageModule,
     MenubarModule,
+    MenuModule,
     ButtonModule,
     DialogModule,
     SliderModule,

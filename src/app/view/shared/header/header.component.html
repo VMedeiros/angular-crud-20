@@ -1,7 +1,7 @@
 <div class="p-col-12 header">
     <div class="ui-g ui-fluid">
         <div class="ui-g-2 ui-md-2">
-            <button pButton type="button" icon="pi pi-bars" iconPos="left" (click)="menu = true" pTooltip="Menu"
+            <button pButton type="button" icon="pi pi-bars" iconPos="left" (click)="openMenu()" pTooltip="Menu"
                 tooltipPosition="right"></button>
         </div>
 
@@ -27,15 +27,15 @@
 
             <hr>
             <ul>
-                <h4 class="texto-menu" [routerLink]="['/home/pessoa']" (click)="menu = false"><i
+                <h4 class="texto-menu" [routerLink]="['/home/pessoa']" (click)="closeMenu()"><i
                         class="pi pi-id-card icones"></i> Pessoa</h4>
                 <hr>
 
-                <h4 class="texto-menu" [routerLink]="['/home/card']" (click)="menu = false"><i
+                <h4 class="texto-menu" [routerLink]="['/home/card']" (click)="closeMenu()"><i
                         class="pi pi-home icones"></i> Início </h4>
                 <hr>
 
-                <h4 class="texto-menu" [routerLink]="['/login']" (click)="menu = false"> <i
+                <h4 class="texto-menu" [routerLink]="['/login']" (click)="closeMenu()"> <i
                         class="pi pi-sign-out icones"></i> Sair </h4>
             </ul>
             <hr>

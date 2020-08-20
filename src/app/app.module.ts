@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
 import { PrimeNgModule } from './view/shared/components/PrimeNg.module';
 import { SharedComumModule } from './view/shared/sharedComum.module';
+import { PessoaModule } from './view/pessoa/pessoa.module';
 
 @NgModule({
     declarations: [
@@ -19,10 +20,10 @@ import { SharedComumModule } from './view/shared/sharedComum.module';
         HttpClientModule,
         AppRoutingModule,
         SharedComumModule,
+        PessoaModule,
         /* ---INTERFACE--- */
         PrimeNgModule
     ],
-    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

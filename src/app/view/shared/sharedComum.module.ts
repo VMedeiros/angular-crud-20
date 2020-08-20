@@ -22,6 +22,8 @@ import { LoginComponent } from './login/login.component';
         RouterModule,
         ReactiveFormsModule,
         FormsModule,
+        /* ---interface--- */
+        PrimeNgModule
     ],
     providers: [],
     exports: [
@@ -29,8 +31,6 @@ import { LoginComponent } from './login/login.component';
         HeaderComponent,
         FooterComponent,
         LoginComponent,
-        /* ---interface--- */
-        PrimeNgModule
     ]
 })
 export class SharedComumModule { }
